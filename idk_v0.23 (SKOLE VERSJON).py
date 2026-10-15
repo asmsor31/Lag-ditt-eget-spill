@@ -21,6 +21,8 @@ def c_input(c): # clear_input
 # Climb ut the window to get to the roof?
 # Mouse in the attic (and maybe other places, for example dining room.)
 # Killing will have a random dialoge of what happends. (3 different ways can happen?)
+# Remove dining_room_floor1?
+# 1% Chance when phone the galactic alphabet.
 
 # current_room = 'parlor_floor1'
 # if linnia_current_room != 'parlor_floor1' and linnia_alive == True:
@@ -97,7 +99,7 @@ ft_balcony_floor2 = True
 name_balcony_floor2 = '???'
 ft_linnia_room_floor2 = True
 name_linnia_room_floor2 = '???'
-ft_silf_room_floor2 = 's1'
+ft_silf_room_floor2 = True
 name_silf_room_floor2 = '???'
 ft_bathroom_floor2 = True
 name_bathroom_floor2 = '???'
@@ -209,6 +211,14 @@ def credits():
     print("" + name + "\033[0m")
 
 
+
+def random_chance_100():
+    global random_chance_100_result
+    random_chance_100_result = random.randint(1, 100)
+    print(f"ADMIN MESSAGE: {random_chance_100_result}")
+    return
+
+    
 
 ########################################################################################################################################################################################################
 ########################################################################################################################################################################################################
@@ -881,12 +891,12 @@ def kitchen_floor1():
         c_input("\033[33m(There are cabinets along the walls.) \033[0m")
         c_input("\033[33m(It smells pretty good in here.) \033[0m")
         if follower == 'linnia':
-            c_input("\033[33m(" + linnia_name + "\033[33m is staring up at the moon.) \033[0m")
             print()
-            c_input("" + linnia_name + ":  \033[0m")
+            c_input("" + linnia_name + ": placeholder \033[0m")
         elif follower == 'silf':
             print()
-            c_input("" + silf_name + ":  \033[0m")
+            c_input("" + silf_name + ": This isn't a room I'm often in. \033[0m")
+            c_input("" + silf_name + ": I kinda suck at making food... \033[0m")
         name_kitchen_floor1 = 'Kitchen'
         print()
         ft_kitchen_floor1 = False
@@ -904,7 +914,7 @@ def kitchen_floor1():
 
 
 
-def dining_room_floor1():
+def dining_room_floor1(): # Vurderer å fjerne rommet, fordi jeg ikke kommer på så mye å gjøre her. Kan heller bare flytte bordet til kjøkkenet.
     global ft_dining_room_floor1
     global name_dining_room_floor1
     global current_room
@@ -1005,6 +1015,13 @@ def door_floor1():
         c_input("\033[33m(A few small paintings are on the wall.) \033[0m")
         c_input("\033[33m(There's a flower pot in the corner.) \033[0m")
         c_input("\033[33m(It doesn't look like there is much to do here.) \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": Uhh... why are we here? \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": Do you want to leave? \033[0m")
+            c_input("" + silf_name + ": Pretty understandable when my sister also lives here, heh. \033[0m")
         name_door_floor1 = 'Door'
         print()
         ft_door_floor1 = False
@@ -1102,6 +1119,12 @@ def balcony_floor2():
         c_input("\033[33m(The fresh air fills your lungs.) \033[0m")
         c_input("\033[33m(There is a few flower pots around.) \033[0m")
         c_input("\033[33m(There's a lantern here too.) \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": One of many reading spots I have. \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": placeholder \033[0m")
         name_balcony_floor2 = 'Balcony'
         print()
         ft_balcony_floor2 = False
@@ -1129,6 +1152,12 @@ def linnia_room_floor2():
         c_input("\033[33m(It looks like a bedroom.) \033[0m")
         c_input("\033[33m(It's very tidy in here.) \033[0m")
         c_input("\033[33m(There are surprisingly many plants here.) \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": Feel free to look around if you want to! \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": I don't get why you brought me here. \033[0m")
         name_linnia_room_floor2 = "" + linnia_name + "\033[33m's room"
         print()
         ft_linnia_room_floor2 = False
@@ -1152,25 +1181,20 @@ def silf_room_floor2():
     global name_silf_room_floor2
     global current_room
     current_room = 'silf_room_floor2'
-    if ft_silf_room_floor2 == 's1':
-        c_input("" + linnia_name + ": That's my brothers room. \033[0m")
-        c_input("" + linnia_name + ": I don't think you can go in there. \033[0m")
-        c_input("" + linnia_name + ": I'm not allowed in there at least... \033[0m")
+    if ft_silf_room_floor2 == True:
+        c_input("\033[33m(You walk into a... uh... room... of some sort.) \033[0m")
+        c_input("\033[33m(It's very messy in here.) \033[0m")
+        c_input("\033[33m(There's a few posters on the walls.) \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": Uhh... \033[0m")
+            c_input("" + linnia_name + ": I don't think I should be here... \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": Just do whatever I guess. \033[0m")
         name_silf_room_floor2 = "" + silf_name + "\033[33m's room"
-        ft_silf_room_floor2 = 's2'
         print()
-        hall_floor2()
-    elif ft_silf_room_floor2 == 's2':
-        c_input("" + linnia_name + ": You can try going in yourself if you want? \033[0m")
-        c_input("" + linnia_name + ": If you do, I'll go back to my room. \033[0m")
-        c_input("" + linnia_name + ": He's kinda an idiot. \033[0m")
-        ft_silf_room_floor2 = 's3'
-        print()
-        hall_floor2()
-    elif ft_silf_room_floor2 == 's3':
-        c_input("\033[33m(placeholder) \033[0m")
-        print()
-        ft_silf_room_floor2 = 's4'
+        ft_silf_room_floor2 = False
     c_input("\033[33m(You are in " + silf_name + "\033[33m's room. [First floor]) \033[0m")
     print("\033[33m(What do you wanna do?)\033[0m")
     time.sleep(1)
@@ -1221,9 +1245,14 @@ def office_floor2():
         c_input("\033[33m(There is a desk in the middle of the room.) \033[0m")
         c_input("\033[33m(The office looks kinda cozy.) \033[0m")
         c_input("\033[33m(It kinda gives off a japanese vibe.) \033[0m")
-        print()
-        c_input("" + linnia_name + ": This was my dad's office before he vanished. \033[0m")
-        c_input("" + linnia_name + ": He used to write a lot in here. \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": This was my dad's office before he vanished. \033[0m")
+            c_input("" + linnia_name + ": He used to write a lot in here. \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": Wasen't long ago that my dad used to write in here. \033[0m")
+            c_input("" + silf_name + ": Before he vanished. \033[0m")
         name_office_floor2 = 'Office'
         print()
         ft_office_floor2 = False
@@ -1286,9 +1315,8 @@ def office_floor2():
         c_input("\033[33m(You walk to the telephone.) \033[0m")
         c_input("\033[33m(You dial a random number.) \033[0m")
         c_input("\033[33m(...) \033[0m")
-        office_floor2_makeacallonthetelephone_random = random.randint(1, 100)
-        print(f"ADMIN MESSAGE: {office_floor2_makeacallonthetelephone_random}")
-        if office_floor2_makeacallonthetelephone_random == 7:
+        random_chance_100()
+        if random_chance_100_result == 7:
             if office_floor2_makeacallonthetelephone_7 == 's1':
                 print()
                 c_input("\033[0m???: Hello my good sir... or madam... or whatever you are...! \033[0m")
@@ -1303,7 +1331,7 @@ def office_floor2():
                 office_floor2_makeacallonthetelephone_7 = 's2'
             elif office_floor2_makeacallonthetelephone_7 == 's2':
                 c_input("\033[33m(Nobody answered.) \033[0m")
-        elif office_floor2_makeacallonthetelephone_random == 17:
+        elif random_chance_100_result == 17:
             if office_floor2_makeacallonthetelephone_17 == 's1':
                 print()
                 c_input("\033[0m???: Hello, this is Elif. \033[0m")
@@ -1341,6 +1369,14 @@ def attic_floor3():
         c_input("\033[33m(It's filled to the brim with random objects.) \033[0m")
         c_input("\033[33m(It is pretty dark here.) \033[0m")
         c_input("\033[33m(Moonlight is shining through the singular window.) \033[0m")
+        if follower == 'linnia':
+            print()
+            c_input("" + linnia_name + ": Uhm... \033[0m")
+            c_input("" + linnia_name + ": How long are we gonna stay up here for...? \033[0m")
+        elif follower == 'silf':
+            print()
+            c_input("" + silf_name + ": I remember trapping " + linnia_name + "\033[36m up here when we were younger. \033[0m")
+            c_input("" + silf_name + ": Heh, such fun times. \033[0m")
         name_attic_floor2 = 'Attic'
         print()
         ft_attic_floor2 = False
@@ -1497,6 +1533,7 @@ def talk_attack():
     global linnia_alive, silf_alive, valtura_alive, leaf_alive, eerie_alive
     global talk_attack_linnia_scared
     global talk_attacked_ground
+    global talk_attack_choice_knife, talk_attack_choice_revolver
     if current_room == 'garden_floor1': # to specify in <person>_attacked() what floor material there is. (Floor/Ground)
         talk_attacked_ground = 'ground'
     else:
@@ -1624,7 +1661,7 @@ def talk_attack():
 
                     elif talk_attacked == 'leaf':
                         c_input("\033[33m(You pull out your knife.) \033[0m")
-                        c_input("\033[33m(It doesn't look like Leaf seems to care.) \033[0m")
+                        c_input("\033[33m(It doesn't look like Leaf has a care in the world.) \033[0m")
                         c_input("\033[33m(Leaf cuddles against your leg,) \033[0m")
                         c_input("\033[33m(before looking up at your face.) \033[0m")
                         time.sleep(1)
@@ -1844,8 +1881,13 @@ def talk_attack():
 def linnia_attacked():
     global linnia_alive
     global follower
+    global talk_attack_choice_knife, talk_attack_choice_revolver
+
     if talk_attack_weapon == 'knife':
-        c_input("\033[33m(You pull out your knife and lunge towards " + linnia_name + "\033[33m.) \033[0m")
+        if talk_attack_choice_knife == '1':
+            c_input("\033[33m(You lunge towards " + linnia_name + "\033[33m with your knife in hand.) \033[0m")
+        elif talk_attack_choice_knife == '2':
+            c_input("\033[33m(You pull out your revolver and lunge towards " + linnia_name + "\033[33m.) \033[0m")
         c_input("\033[33m(" + linnia_name + "\033[33m doesn't have time to react.) \033[0m")
         c_input("\033[33m(You force the knife into her stomach.) \033[0m")
         c_input("\033[33m(" + linnia_name + "\033[33m tries to scream,) \033[0m")
@@ -1860,8 +1902,25 @@ def linnia_attacked():
         c_input("\033[33m(It's covered in blood.) \033[0m")
         c_input("\033[33m(The blood is dripping down your arm, and a few drops fall onto the " + talk_attacked_ground + ".) \033[0m")
         c_input("\033[33m(A small puddle of blood forms around " + linnia_name + "\033[33m's corpse.) \033[0m")
+
     elif talk_attack_weapon == 'revolver':
-        c_input("\033[33m(placeholder linnia_attacked (revolver)) \033[0m")
+        if talk_attack_choice_revolver == '1':
+            c_input("\033[33m(You press down the trigger.) \033[0m")
+        elif talk_attack_choice_revolver == '2':
+            c_input("\033[33m(You pull out your revolver and fire towards " + linnia_name + "\033[33m.) \033[0m")
+        c_input("\033[33m(A loud bang goes through the entire house.) \033[0m")
+        c_input("\033[33m(The bullet goes directly through " + linnia_name + "\033[33m's head.) \033[0m")
+        c_input("\033[33m(Linnia falls onto the " + talk_attacked_ground + ".) \033[0m")
+        c_input("\033[33m(A puddle of blood forms around her head.) \033[0m")
+        c_input("\033[33m(She doesn't move anymore.) \033[0m")
+        c_input("\033[33m(You look at your revolver.) \033[0m")
+        c_input("\033[33m(You aim your revolver towards " + linnia_name + "\033[33m and press down the trigger.) \033[0m")
+        c_input("\033[33m(Another loud bang is heard through the building.) \033[0m")
+        c_input("\033[33m(The bullet goes through her chest.) \033[0m")
+        c_input("\033[33m(More blood fills the " + talk_attacked_ground +".) \033[0m")
+        c_input("\033[33m(You lower your revolver.) \033[0m")
+        c_input("\033[33m(" + linnia_name + "\033[33m's corpse lays on the " + talk_attacked_ground +".) \033[0m")
+
     print()
     if follower == 'linnia':
         follower = None
@@ -1989,6 +2048,7 @@ def current_room_check():
 ########################################################################################################################################################################################################
 ########################################################################################################################################################################################################
 # TESTING
+print("----------------------------------------------------------------------------------------------------")
 print("[ADMIN TESTING]:")
 
 name = '\033[33mÅsmund'
@@ -2009,10 +2069,8 @@ print("inventory_revolver = 1")
 print("inventory_basement_key = 0")
 print("inventory_spellbook = 0")
 
-#follower = None
 #follower = 'linnia'
 #follower = 'silf'
-#print("follower = None")
 #print("follower = 'linnia'")
 #print("follower = 'silf'")
 
@@ -2022,10 +2080,11 @@ print("current_room = 'parlor_floor1'")
 #print("hall_floor1()")
 print("linnia_talk()")
 
-print("--------------------------------------------------")
+print("----------------------------------------------------------------------------------------------------")
 
 #hall_floor1()
 linnia_talk()
+
 ########################################################################################################################################################################################################
 ########################################################################################################################################################################################################
 ########################################################################################################################################################################################################
@@ -2080,7 +2139,11 @@ while True:
         time.sleep(1)
         continue
     elif name.lower() == 'valtura':
-        print("\033[32mI let you live in my house, and you dare take my name!? You ungrateful little intruder.\033[0m")
+        print("\033[32mI let you live in my house, and you dare try take my name!? You ungrateful little intruder.\033[0m")
+        time.sleep(1)
+        continue
+    elif name.lower() == 'elif':
+        print("\033[34mHmm... I think that name is taken... isn't it? \033[0m")
         time.sleep(1)
         continue
     elif name.lower() == 'program' or name == 'the program':
