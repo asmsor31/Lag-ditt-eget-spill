@@ -6,7 +6,7 @@ Egentlig så vil jeg ikke si helt hva det handler om, fordi opplevelsen er mye b
 Spillet handler om at du er i en kjeller i et stort hus, nesten en mansion, men du husker ikke hvordan du kom dit. Du møter en jente som bor i dette huset som slipper deg ut av kjelleren, og fra der kan du utforske huset sånn du vil. Du møter et par ulike karakterer, og noen mysterier som ikke gir helt mening. Du finner objekter som du kan bruke til forskjellige ting. De tre hovedrutene du kan gå er:
 - Ruten der du ikke fyller kravene til noen av de andre rutene, så du får den normale ruten. Denne kommer antageligvis alle til å få første gang de spiller igjennom. Denne ruten hinter deg også om at det finnes andre muligheter.
 - Ruten der du blir kjent med alle ekstra godt, og ikke dreper noen. Dette er nok den beste ruten å ta i spillet. Med vennene du får denne ruten kan du fjerne problemet du opplever i slutten av den vanlige ruten.
-- Ruten der du dreper alle/de viktigste. Dette vil hjelpe deg fjerne problemet du opplever i slutten av den normale ruten, men vil skape et enda større problem. Du lærer også ekstra mye om sannheten. enn du gjør i den der du blir venner med alle.
+- Ruten der du dreper alle/de viktigste karakterene. Dette vil hjelpe deg fjerne problemet du opplever i slutten av den normale ruten, men vil skape et enda større problem. Du lærer også ekstra om "sannheten" enn du gjør i den der du blir venner med alle.
 
 Dette er faktisk veldig lite av hvor mye jeg faktisk har planlagt for dette spillet, i koden står det litt av hva jeg planlegger, mesteparten har jeg skrevet på et dokument på telefonen min.
 <br><br>

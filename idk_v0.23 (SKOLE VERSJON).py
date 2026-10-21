@@ -19,7 +19,7 @@ def c_input(c): # clear_input
 # <name>_rizz_points?
 # forandre på så snakke med folk i rom alltid har samme options, (drepe feks) med noen options som passer rommet kanskje? Eller skal det bare gå hvis de er en follower?
 # Climb ut the window to get to the roof?
-# Mouse in the attic (and maybe other places, for example dining room.)
+# Mouse in the attic (and maybe other places, for example dining room and storage room.)
 # Killing will have a random dialoge of what happends. (3 different ways can happen?)
 # Remove dining_room_floor1?
 # 1% Chance when phone the galactic alphabet.
@@ -32,20 +32,60 @@ def c_input(c): # clear_input
 
 
 
+# CHARACTER TALK ROOM AND FOLLOWER THINGY TEST IDFK JUST SOMETHING
+def testnjgsnjgnjinjinjvnjvenjinjveonjvesonjvesnj():
+    global linnia_current_room
+    global follower
+    global talk_attacked
+    storage_room_floor0_option_talktolinnia = None
+    storage_room_floor0_option_talktosilf = None
+    storage_room_floor0_option_talktovaltura = None
+    storage_room_floor0_option_talktoleaf = None
+    storage_room_floor0_option_talktoeerie = None
+    storage_room_floor0_options = 0
+    if linnia_current_room == 'storage_room_floor0' or follower == 'linnia':
+        storage_room_floor0_options += 1
+        print(f"\033[33m[{storage_room_floor0_options} = Talk to " + linnia_name + "\033[33m.]\033[0m")
+        storage_room_floor0_option_talktolinnia = storage_room_floor0_options
+    if silf_current_room == 'storage_room_floor0' or follower == 'silf':
+        storage_room_floor0_options += 1
+        print(f"\033[33m[{storage_room_floor0_options} = Talk to " + silf_name + "\033[33m.]\033[0m")
+        storage_room_floor0_option_talktosilf = storage_room_floor0_options
+    if valtura_current_room == 'storage_room_floor0' or follower == 'valtura':
+        storage_room_floor0_options += 1
+        print(f"\033[33m[{storage_room_floor0_options} = Talk to " + valtura_name + "\033[33m.]\033[0m")
+        storage_room_floor0_option_talktovaltura = storage_room_floor0_options
+    if leaf_current_room == 'storage_room_floor0' or follower == 'leaf':
+        storage_room_floor0_options += 1
+        print(f"\033[33m[{storage_room_floor0_options} = Talk to \033[0mLeaf\033[33m.]\033[0m")
+        storage_room_floor0_option_talktoleaf = storage_room_floor0_options
+    if eerie_current_room == 'storage_room_floor0' or follower == 'eerie':
+        storage_room_floor0_options += 1
+        print(f"\033[33m[{storage_room_floor0_options} = Talk to \033[0mEerie\033[33m.]\033[0m")
+        storage_room_floor0_option_talktoeerie = storage_room_floor0_options
+    print()
+    time.sleep(1)
+    if storage_room_floor0_choice == str(storage_room_floor0_option_talktolinnia) and storage_room_floor0_option_talktolinnia is not None:
+        linnia_talk()
+
+
+
+
+
 # CHARACTERS AND THEIR STATS
-nello_name = '\033[30m???'
 linnia_name = '\033[35m???'
 silf_name = '\033[36m???'
 valtura_name = '\033[32m???'
+nello_name = '\033[30m???'
 program_name = '\033[34m???'
 man_name = '\033[31m???'
 
-nello_alive = True
 linnia_alive = True
 silf_alive = True
 valtura_alive = True
 leaf_alive = True
 eerie_alive = True
+nello_alive = True
 program_alive = True
 man_alive = True
 
@@ -149,67 +189,6 @@ office_floor2_makeacallonthetelephone_7 = 's1'
 office_floor2_makeacallonthetelephone_17 = 's1'
 
 # Floor3
-
-
-# You aren't planning to change anything in the credits, are you?
-def credits():
-    time.sleep(2)
-    print()
-    print("\033[33mCREDITS\033[0m")
-    time.sleep(2)
-    print()
-    print("\033[33mA Game Made By:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print()
-    print("\033[33mStory:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print()
-    print("\033[33mProgramming:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print()
-    print("\033[33mBugs: (If there are any)\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print()
-    print("\033[33mVisuals:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print("Your Brain")
-    time.sleep(2)
-    print()
-    print("\033[33mCharacter Designs:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print("Your Brain")
-    time.sleep(2)
-    print()
-    print("\033[33mMusic:\033[0m")
-    time.sleep(2)
-    print("[Not in this version.]")
-    time.sleep(2)
-    print()
-    print("\033[33mPlaytesters:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print()
-    print("\033[33mSpecial Thanks:\033[0m")
-    time.sleep(2)
-    print("Åsmund Nordal Sørum")
-    time.sleep(2)
-    print("" + program_name + "\033[0m")
-    time.sleep(2)
-    print("" + name + "\033[0m")
-
 
 
 def random_chance_100():
@@ -424,11 +403,14 @@ def nello_floor0():
                 c_input("\033[33m(You try to open the door again.) \033[0m")
                 c_input("\033[33m(Surprisingly, the door is still locked.) \033[0m")
                 print()
-                c_input("" + nello_name + ": (This kid is actually so stupid.) \033[0m")
                 c_input("" + nello_name + ": Like I said, you will need the Basement key to open that door. \033[0m")
                 if follower == 'silf':
                     print()
                     c_input("" + silf_name + ": As if we are ever letting him out, right? \033[0m")
+                nello_floor0_trytoopendoor = 's3'
+            elif nello_floor0_trytoopendoor == 's3':
+                c_input("" + nello_name + ": (This kid is actually so stupid.) \033[0m")
+                c_input("" + nello_name + ": Like I said, you will need the Basement key to open that door. \033[0m")
             print()
             nello_floor0()
         elif inventory_basement_key > 0:
@@ -1120,7 +1102,7 @@ def door_floor1():
             c_input("" + linnia_name + ": Uhh... why are we here? \033[0m")
         elif follower == 'silf':
             print()
-            c_input("" + silf_name + ": Do you want to leave? \033[0m")
+            c_input("" + silf_name + ": Did you want to leave? \033[0m")
             c_input("" + silf_name + ": Pretty understandable when my sister also lives here, heh. \033[0m")
         name_door_floor1 = 'Door'
         print()
@@ -1572,7 +1554,7 @@ def linnia_random_current_room():
     linnia_switch_current_room = random.choice(["no", "no", "yes"])
     if linnia_switch_current_room == 'yes':
         linnia_current_room = random.choice(["parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "bathroom_floor1", "balcony_floor2", "linnia_room_floor2", "bathroom_floor2"])
-        print("Linnia moved room. (ADMIN MESSAGE)")
+        print("Linnia moved room to " + linnia_current_room + " (ADMIN MESSAGE)")
     return
 
 def silf_random_current_room():
@@ -1580,7 +1562,7 @@ def silf_random_current_room():
     silf_switch_current_room = random.choice(["no", "no", "yes"])
     if silf_switch_current_room == 'yes':
         silf_current_room = random.choice(["parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "bathroom_floor1", "balcony_floor2", "silf_room_floor2", "bathroom_floor2"])
-        print("Silf moved room. (ADMIN MESSAGE)")
+        print("Silf moved room to " + silf_current_room + " (ADMIN MESSAGE)")
     return
 
 def valtura_random_current_room():
@@ -1588,7 +1570,7 @@ def valtura_random_current_room():
     valtura_switch_current_room = random.choice(["no", "no", "yes"])
     if valtura_switch_current_room == 'yes':
         valtura_current_room = random.choice(["parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "bathroom_floor1", "valtura_room_floor1", "balcony_floor2"])
-        print("Valtura moved room. (ADMIN MESSAGE)")
+        print("Valtura moved room to " + valtura_current_room + " (ADMIN MESSAGE)")
     return
 
 def leaf_random_current_room():
@@ -1596,15 +1578,13 @@ def leaf_random_current_room():
     leaf_switch_current_room = random.choice(["no", "no", "yes"])
     if leaf_switch_current_room == 'yes':
         leaf_current_room = random.choice(["parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "door_floor1", "balcony_floor2", "linnia_room_floor2"])
-        print("Leaf moved room. (ADMIN MESSAGE)")
+        print("Leaf moved room to " + leaf_current_room + " (ADMIN MESSAGE)")
     return
 
 def eerie_random_current_room():
     global eerie_current_room
-    eerie_switch_current_room = random.choice(["no", "no", "yes"])
-    if eerie_switch_current_room == 'yes':
-        eerie_current_room = random.choice(["nello_floor0", "storage_room_floor0", "parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "valtura_room_floor1", "bathroom_floor1", "door_floor1", "balcony_floor2", "linnia_room_floor2", "silf_room_floor2", "bathroom_floor2", "attic_floor3"])
-        print("Eerie moved room. (ADMIN MESSAGE)")
+    eerie_current_room = random.choice(["nello_floor0", "storage_room_floor0", "parlor_floor1", "garden_floor1", "kitchen_floor1", "dining_room_floor1", "valtura_room_floor1", "bathroom_floor1", "door_floor1", "balcony_floor2", "linnia_room_floor2", "silf_room_floor2", "bathroom_floor2", "attic_floor3"])
+    print("Eerie moved room to " + eerie_current_room + " (ADMIN MESSAGE)")
     return
 
 ########################################################################################################################################################################################################
@@ -1657,6 +1637,8 @@ def linnia_talk():
     elif linnia_talk_choice == str(linnia_talk_option_attack) and linnia_talk_option_attack is not None:
         talk_attacked = 'linnia'
         talk_attack()
+    elif linnia_talk_choice == '0':
+        return
     else:
         linnia_talk()
 
@@ -1665,26 +1647,31 @@ def linnia_talk():
 def silf_talk():
     global silf_current_room
     c_input("" + silf_name + ": talk placeholder \033[0m")
+    return
 
 
 def valtura_talk():
     global valtura_current_room
     c_input("" + valtura_name + ": talk placeholder \033[0m")
+    return
 
 
 def leaf_talk():
     global leaf_current_room
     c_input("Leaf: talk placeholder \033[0m")
+    return
 
 
 def eerie_talk():
     global eerie_current_room
     c_input("Eerie: talk placeholder \033[0m")
+    return
 
 
 def nello_talk():
     global nello_current_room
     c_input("" + nello_name + ": talk placeholder \033[0m")
+    return
 
 
 
@@ -1824,12 +1811,12 @@ def talk_attack():
 
                     elif talk_attacked == 'leaf':
                         c_input("\033[33m(You pull out your knife.) \033[0m")
-                        c_input("\033[33m(It doesn't look like Leaf has a care in the world.) \033[0m")
-                        c_input("\033[33m(Leaf cuddles against your leg,) \033[0m")
+                        c_input("\033[33m(It doesn't look like \033[0mLeaf\033[33m has a care in the world.) \033[0m")
+                        c_input("\033[33m(\033[0mLeaf\033[33m cuddles against your leg,) \033[0m")
                         c_input("\033[33m(before looking up at your face.) \033[0m")
                         time.sleep(1)
                         while True:
-                            print("\033[33m[1 = Attack Leaf.]\033[0m")
+                            print("\033[33m[1 = Attack \033[0mLeaf\033[33m.]\033[0m")
                             print("\033[33m[2 = Put away knife.]\033[0m")
                             talk_attack_choice_knife_takeoutknife_leaf_choice = c_input("\033[33mAnswer: \033[0m")
                             print()
@@ -1839,8 +1826,8 @@ def talk_attack():
                             elif talk_attack_choice_knife_takeoutknife_leaf_choice == '2':
                                 c_input("\033[33m(You look down at your knife.) \033[0m")
                                 c_input("\033[33m(You decide to put away the knife.) \033[0m")
-                                c_input("\033[33m(You bend down to pet Leaf.) \033[0m")
-                                c_input("\033[33m(Leaf cuddles against your hand.) \033[0m")
+                                c_input("\033[33m(You bend down to pet \033[0mLeaf\033[33m.) \033[0m")
+                                c_input("\033[33m(\033[0mLeaf\033[33m cuddles against your hand.) \033[0m")
                             else:
                                 continue
                             print()
@@ -2205,6 +2192,97 @@ def current_room_check():
 ########################################################################################################################################################################################################
 
 # Battle Against A True Hero (Battles)
+
+
+
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+########################################################################################################################################################################################################
+
+# Endings
+
+def ending_1(): # normal "neutral"
+    c_input("placeholder ending_1")
+    # meet the program and battle with the program or just accept fate.
+
+
+def ending_2(): # "pacifist"
+    c_input("placeholder ending_2")
+    # battle as the true hero against the program, with everyone. You can spare the program, but you will get almost the exact same ending. Meet the man at the tree after.
+
+
+
+def ending_3(): # "genocide"
+    c_input("placeholder ending_3")
+    # fight the man in the garden.
+
+
+
+def ending_4(): # "linnia the witch"
+    c_input("placeholder ending_4")
+    # Fight against Linnia, but you changed her. You have gone too far now. There is no returning from this point. She is not the kind girl you once knew.
+
+
+
+# You aren't planning to change anything in the credits, are you?
+def credits():
+    time.sleep(2)
+    print()
+    print("\033[33mCREDITS\033[0m")
+    time.sleep(2)
+    print()
+    print("\033[33mA Game Made By:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print()
+    print("\033[33mStory:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print()
+    print("\033[33mProgramming:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print()
+    print("\033[33mBugs: (If there are any)\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print()
+    print("\033[33mVisuals:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print("Your Brain")
+    time.sleep(2)
+    print()
+    print("\033[33mCharacter Designs:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print("Your Brain")
+    time.sleep(2)
+    print()
+    print("\033[33mMusic:\033[0m")
+    time.sleep(2)
+    print("[Not in this version.]")
+    time.sleep(2)
+    print()
+    print("\033[33mPlaytesters:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print()
+    print("\033[33mSpecial Thanks:\033[0m")
+    time.sleep(2)
+    print("Åsmund Nordal Sørum")
+    time.sleep(2)
+    print("" + program_name + "\033[0m")
+    time.sleep(2)
+    print('"' + name + '\033[0m"')
+
 
 
 ########################################################################################################################################################################################################
@@ -2619,7 +2697,7 @@ while True:
                 c_input("\033[33m(" + linnia_name + "\033[33m looks away and blushes a little.) \033[0m")
                 c_input("" + linnia_name + ": (Pull yourself together Linnea, probably didn't mean it in a weird way.) \033[0m")
                 c_input("" + linnia_name + ": I can't come to think of anything right now... \033[0m")
-                c_input("" + linnia_name + ": Uhh... I have brown cat named Leaf? \033[0m")
+                c_input("" + linnia_name + ": Uhh... I have brown cat named \033[0mLeaf\033[35m? \033[0m")
                 basement_girl_tellmemoreaboutyou = 's3'
                 print()
             elif basement_girl_tellmemoreaboutyou == 's3':
