@@ -267,9 +267,31 @@ def basement_floor0():
     time.sleep(1)
 
     if basement_floor0_choice == '1':
+        if linnia_current_room != 'storage_room_floor0' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'storage_room_floor0' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'storage_room_floor0' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'storage_room_floor0' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'storage_room_floor0' and eerie_alive == True:
+            eerie_random_current_room()
         storage_room_floor0()
+
     elif basement_floor0_choice == '2':
+        if linnia_current_room != 'nello_floor0' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'nello_floor0' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'nello_floor0' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'nello_floor0' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'nello_floor0' and eerie_alive == True:
+            eerie_random_current_room()
         nello_floor0()
+
     elif basement_floor0_choice == '0':
         stairs()
     else:
@@ -283,18 +305,6 @@ def storage_room_floor0():
     global name_storage_room_floor0
     global current_room
     current_room = 'storage_room_floor0'
-
-    if linnia_current_room != 'storage_room_floor0' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'storage_room_floor0' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'storage_room_floor0' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'storage_room_floor0' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'storage_room_floor0' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_storage_room_floor0 == True:
         c_input("\033[33m(You walk into a small room in the basement.) \033[0m")
         c_input("\033[33m(The room is filled with a lot of random stuff, like old christmas decoration and other stuff.) \033[0m")
@@ -373,18 +383,6 @@ def nello_floor0():
     global ft_nello_floor0
     global current_room
     current_room = 'nello_floor0'
-
-    if linnia_current_room != 'nello_floor0' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'nello_floor0' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'nello_floor0' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'nello_floor0' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'nello_floor0' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_bathroom_floor1 == True:
         c_input("\033[33m(You walk back to " + nello_name + "\033[33m's room.) \033[0m")
         c_input("\033[33m(It's as dusty as last time.) \033[0m")
@@ -463,19 +461,96 @@ def hall_floor1():
     print()
     time.sleep(1)
     if hall_floor1_choice == '1':
+        if linnia_current_room != 'parlor_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'parlor_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'parlor_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'parlor_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'parlor_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         parlor_floor1()
+
     elif hall_floor1_choice == '2':
+        if linnia_current_room != 'garden_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'garden_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'garden_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'garden_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'garden_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         garden_floor1()
+
     elif hall_floor1_choice == '3':
+        if linnia_current_room != 'kitchen_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'kitchen_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'kitchen_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'kitchen_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'kitchen_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         kitchen_floor1()
+
     elif hall_floor1_choice == '4':
+        if linnia_current_room != 'dining_room_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'dining_room_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'dining_room_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'dining_room_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'dining_room_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         dining_room_floor1()
+
     elif hall_floor1_choice == '5':
+        if linnia_current_room != 'valtura_room_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'valtura_room_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'valtura_room_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'valtura_room_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'valtura_room_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         valtura_room_floor1()
+
     elif hall_floor1_choice == '6':
+        if linnia_current_room != 'bathroom_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'bathroom_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'bathroom_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'bathroom_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'bathroom_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         bathroom_floor1()
+
     elif hall_floor1_choice == '7':
+        if linnia_current_room != 'door_floor1' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'door_floor1' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'door_floor1' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'door_floor1' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'door_floor1' and eerie_alive == True:
+            eerie_random_current_room()
         door_floor1()
+
     elif hall_floor1_choice == '0':
         stairs()
     else:
@@ -494,17 +569,6 @@ def parlor_floor1():
     global parlor_floor1_gotopiano_follower_none, parlor_floor1_gotopiano_follower_linnia, parlor_floor1_gotopiano_follower_silf
     global current_room
     current_room = 'parlor_floor1'
-
-    if linnia_current_room != 'parlor_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'parlor_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'parlor_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'parlor_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'parlor_floor1' and eerie_alive == True:
-        eerie_random_current_room()
 
     if ft_parlor_floor1 == True:
         c_input("\033[33m(You walk into a cozy room.) \033[0m")
@@ -785,18 +849,6 @@ def garden_floor1():
     global inventory_flower
     global current_room
     current_room = 'garden_floor1'
-
-    if linnia_current_room != 'garden_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'garden_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'garden_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'garden_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'garden_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_garden_floor1 == True:
         c_input("\033[33m(You walk outside behind the building.) \033[0m")
         c_input("\033[33m(The vibrant red nature waving in the wind.) \033[0m")
@@ -932,18 +984,6 @@ def kitchen_floor1():
     global name_kitchen_floor1
     global current_room
     current_room = 'kitchen_floor1'
-
-    if linnia_current_room != 'kitchen_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'kitchen_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'kitchen_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'kitchen_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'kitchen_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_kitchen_floor1 == True:
         c_input("\033[33m(You walk into a pretty white room.) \033[0m")
         c_input("\033[33m(The floor has a black and white checker pattern.) \033[0m")
@@ -956,7 +996,7 @@ def kitchen_floor1():
         elif follower == 'silf':
             print()
             c_input("" + silf_name + ": This isn't a room I'm often in. \033[0m")
-            c_input("" + silf_name + ": I kinda suck at making food... \033[0m")
+            c_input("" + silf_name + ": I suck at making food... \033[0m")
         name_kitchen_floor1 = 'Kitchen'
         print()
         ft_kitchen_floor1 = False
@@ -979,18 +1019,6 @@ def dining_room_floor1(): # Vurderer å fjerne rommet, fordi jeg ikke kommer på
     global name_dining_room_floor1
     global current_room
     current_room = 'dining_room_floor1'
-
-    if linnia_current_room != 'dining_room_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'dining_room_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'dining_room_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'dining_room_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'dining_room_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_dining_room_floor1 == True:
         c_input("\033[33m(You walk into what looks like a pretty royal room.) \033[0m")
         c_input("\033[33m(There are paintings on the walls.) \033[0m")
@@ -1018,18 +1046,6 @@ def valtura_room_floor1():
     global name_valtura_room_floor1
     global current_room
     current_room = 'valtura_room_floor1'
-
-    if linnia_current_room != 'valtura_room_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'valtura_room_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'valtura_room_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'valtura_room_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'valtura_room_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_valtura_room_floor1 == 's1':
         c_input("" + linnia_name + ": I don't think we should go in there... \033[0m")
         c_input("" + linnia_name + ": That's my mom's room. \033[0m")
@@ -1069,18 +1085,6 @@ def bathroom_floor1(): # Might be removed.
     global name_bathroom_floor1
     global current_room
     current_room = 'bathroom_floor1'
-
-    if linnia_current_room != 'bathroom_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'bathroom_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'bathroom_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'bathroom_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'bathroom_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_bathroom_floor1 == True:
         c_input("\033[33m(placeholder) \033[0m")
         name_bathroom_floor1 = 'Bathroom'
@@ -1106,18 +1110,6 @@ def door_floor1():
     global door_floor1_openthedoor
     global current_room
     current_room = 'door_floor1'
-
-    if linnia_current_room != 'door_floor1' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'door_floor1' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'door_floor1' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'door_floor1' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'door_floor1' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_door_floor1 == True:
         c_input("\033[33m(You walk into a small room.) \033[0m")
         c_input("\033[33m(A few small paintings are on the wall.) \033[0m")
@@ -1201,19 +1193,74 @@ def hall_floor2():
     print()
     time.sleep(1)
     if hall_floor2_choice == '1':
+        if linnia_current_room != 'balcony_floor2' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'balcony_floor2' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'balcony_floor2' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'balcony_floor2' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'balcony_floor2' and eerie_alive == True:
+            eerie_random_current_room()
         balcony_floor2()
+
     elif hall_floor2_choice == '2':
+        if linnia_current_room != 'linnia_room_floor2' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'linnia_room_floor2' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'linnia_room_floor2' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'linnia_room_floor2' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'linnia_room_floor2' and eerie_alive == True:
+            eerie_random_current_room()
         linnia_room_floor2()
+
     elif hall_floor2_choice == '3':
+        if linnia_current_room != 'silf_room_floor2' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'silf_room_floor2' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'silf_room_floor2' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'silf_room_floor2' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'silf_room_floor2' and eerie_alive == True:
+            eerie_random_current_room()
         silf_room_floor2()
+
     elif hall_floor2_choice == '4':
+        if linnia_current_room != 'bathroom_floor2' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'bathroom_floor2' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'bathroom_floor2' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'bathroom_floor2' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'bathroom_floor2' and eerie_alive == True:
+            eerie_random_current_room()
         bathroom_floor2()
+
     elif hall_floor2_choice == '5':
+        if linnia_current_room != 'office_floor2' and linnia_alive == True and follower != 'linnia':
+            linnia_random_current_room()
+        if silf_current_room != 'office_floor2' and silf_alive == True and follower != 'silf':
+            silf_random_current_room()
+        if valtura_current_room != 'office_floor2' and valtura_alive == True:
+            valtura_random_current_room()
+        if leaf_current_room != 'office_floor2' and leaf_alive == True:
+            leaf_random_current_room()
+        if eerie_current_room != 'office_floor2' and eerie_alive == True:
+            eerie_random_current_room()
         office_floor2()
+
     elif hall_floor2_choice == '0':
         stairs()
     else:
-        hall_floor2
+        hall_floor2()
 
 
 
@@ -1222,18 +1269,6 @@ def balcony_floor2():
     global name_balcony_floor2
     global current_room
     current_room = 'balcony_floor2'
-
-    if linnia_current_room != 'balcony_floor2' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'balcony_floor2' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'balcony_floor2' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'balcony_floor2' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'balcony_floor2' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_balcony_floor2 == True:
         c_input("\033[33m(You take a step outside.) \033[0m")
         c_input("\033[33m(The fresh air fills your lungs.) \033[0m")
@@ -1267,18 +1302,6 @@ def linnia_room_floor2():
     global name_linnia_room_floor2
     global current_room
     current_room = 'linnia_room_floor2'
-
-    if linnia_current_room != 'linnia_room_floor2' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'linnia_room_floor2' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'linnia_room_floor2' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'linnia_room_floor2' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'linnia_room_floor2' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_linnia_room_floor2 == True:
         c_input("\033[33m(You walk into what seems like a cozy room.) \033[0m")
         c_input("\033[33m(It looks like a bedroom.) \033[0m")
@@ -1313,18 +1336,6 @@ def silf_room_floor2():
     global name_silf_room_floor2
     global current_room
     current_room = 'silf_room_floor2'
-
-    if linnia_current_room != 'silf_room_floor2' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'silf_room_floor2' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'silf_room_floor2' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'silf_room_floor2' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'silf_room_floor2' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_silf_room_floor2 == True:
         c_input("\033[33m(You walk into a... uh... room... of some sort.) \033[0m")
         c_input("\033[33m(It's very messy in here.) \033[0m")
@@ -1358,18 +1369,6 @@ def bathroom_floor2(): # Might be removed.
     global name_bathroom_floor2
     global current_room
     current_room = 'bathroom_floor2'
-
-    if linnia_current_room != 'bathroom_floor2' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'bathroom_floor2' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'bathroom_floor2' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'bathroom_floor2' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'bathroom_floor2' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_bathroom_floor2 == True:
         c_input("\033[33m(placeholder) \033[0m")
         name_bathroom_floor2 = 'Bathroom'
@@ -1396,18 +1395,6 @@ def office_floor2():
     global office_floor2_makeacallonthetelephone_7, office_floor2_makeacallonthetelephone_17
     global current_room
     current_room = 'office_floor2'
-
-    if linnia_current_room != 'office_floor2' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'office_floor2' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'office_floor2' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'office_floor2' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'office_floor2' and eerie_alive == True:
-        eerie_random_current_room()
-
     if ft_office_floor2 == True:
         c_input("\033[33m(You walk into a dark room.) \033[0m")
         c_input("\033[33m(There is a desk in the middle of the room.) \033[0m")
@@ -1533,16 +1520,16 @@ def attic_floor3():
     global current_room
     current_room = 'attic_floor3'
 
-    if linnia_current_room != 'attic_floor3' and linnia_alive == True and follower != 'linnia':
-        linnia_random_current_room()
-    if silf_current_room != 'attic_floor3' and silf_alive == True and follower != 'silf':
-        silf_random_current_room()
-    if valtura_current_room != 'attic_floor3' and valtura_alive == True:
-        valtura_random_current_room()
-    if leaf_current_room != 'attic_floor3' and leaf_alive == True:
-        leaf_random_current_room()
-    if eerie_current_room != 'attic_floor3' and eerie_alive == True:
-        eerie_random_current_room()
+    #if linnia_current_room != 'attic_floor3' and linnia_alive == True and follower != 'linnia':
+    #    linnia_random_current_room()
+    #if silf_current_room != 'attic_floor3' and silf_alive == True and follower != 'silf':
+    #    silf_random_current_room()
+    #if valtura_current_room != 'attic_floor3' and valtura_alive == True:
+    #    valtura_random_current_room()
+    #if leaf_current_room != 'attic_floor3' and leaf_alive == True:
+    #    leaf_random_current_room()
+    #if eerie_current_room != 'attic_floor3' and eerie_alive == True:
+    #    eerie_random_current_room()
 
     if ft_attic_floor3 == True:
         c_input("\033[33m(You walk into a very dusty room.) \033[0m")
@@ -1581,7 +1568,6 @@ def attic_floor3():
 # Remember to ask if the person is already in that room, and make current_room the room it came from.
 
 def linnia_random_current_room():
-    global linnia_alive
     global linnia_current_room
     linnia_switch_current_room = random.choice(["no", "no", "yes"])
     if linnia_switch_current_room == 'yes':
@@ -1590,7 +1576,6 @@ def linnia_random_current_room():
     return
 
 def silf_random_current_room():
-    global silf_alive
     global silf_current_room
     silf_switch_current_room = random.choice(["no", "no", "yes"])
     if silf_switch_current_room == 'yes':
@@ -1599,7 +1584,6 @@ def silf_random_current_room():
     return
 
 def valtura_random_current_room():
-    global valtura_alive
     global valtura_current_room
     valtura_switch_current_room = random.choice(["no", "no", "yes"])
     if valtura_switch_current_room == 'yes':
@@ -1608,7 +1592,6 @@ def valtura_random_current_room():
     return
 
 def leaf_random_current_room():
-    global leaf_alive
     global leaf_current_room
     leaf_switch_current_room = random.choice(["no", "no", "yes"])
     if leaf_switch_current_room == 'yes':
@@ -1617,7 +1600,6 @@ def leaf_random_current_room():
     return
 
 def eerie_random_current_room():
-    global eerie_alive
     global eerie_current_room
     eerie_switch_current_room = random.choice(["no", "no", "yes"])
     if eerie_switch_current_room == 'yes':
